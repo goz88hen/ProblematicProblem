@@ -17,20 +17,15 @@ namespace ProblematicProblem
             Random rng = new Random();
 
             Console.Write("Hello, welcome to the random activity generator! Would you like to generate a random activity? yes/no: ");
-           
-            bool cont;
-           
-            var contResponse = Console.ReadLine().ToLower();
- 
-           
-            
+             var contResponse = Console.ReadLine().ToLower();
             if (contResponse == "yes")
             {
-              cont = true;
+                cont = true;
             }
-            else
+            else 
             {
               cont = false;
+                Environment.Exit(0);
             }
 
             Console.WriteLine();
@@ -55,7 +50,7 @@ namespace ProblematicProblem
 
             if (seeList)
             {
-                foreach (string activity in activities)
+                foreach (var activity in activities)
                 {
                     Console.Write($"{activity} ");
                     
@@ -63,9 +58,9 @@ namespace ProblematicProblem
                 }
                 Console.WriteLine();
 
-                Console.Write("Would you like to add any activities before we generate one? yes/no: ");
+               Console.Write("Would you like to add any activities before we generate one? yes/no: ");
                
-                bool addToList = (Console.ReadLine().ToLower() == "sure") ? true : false;
+                bool addToList = (Console.ReadLine().ToLower() == "yes") ? true : false;
 
                 Console.WriteLine();
 
